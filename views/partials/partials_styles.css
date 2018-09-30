@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: inline;
+    background-color: #dddddd;
+}
+
+body {
+    font-family: tahoma;
+    background-color: aqua;
+}
+
+ul {
+    position: relative;
+    list-style-type: none;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20%;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

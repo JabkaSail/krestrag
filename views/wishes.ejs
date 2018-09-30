@@ -1,0 +1,235 @@
+ <!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>WantIt</title>
+    
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #232323;
+             color: white;
+    text-align:center;
+    margin-top: 5%;
+}
+table {
+    url()
+    background-color: #1e1833;
+    border-collapse: separate;
+    width: 90%;
+   margin-left:5%;
+     margin-right:5%;
+}
+         a { 
+             color: white;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   }
+
+th, td {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+    .Wishtd:hover{
+    text-decoration: line-through;
+    color: rgba(200,80,80,0.5);
+}
+
+tr:nth-child(even){background-color: #162930}
+
+th {
+    font-size: 1.2em;
+    background-color: #1e1833;
+    color: white;
+}
+.input {
+    width: 90%; 
+    padding: 1%;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    outline: none;
+	-moz-appearance: none;
+	border: 1px solid #110051;
+    resize: none;
+	overflow: auto;
+    padding-bottom: 1%;
+   padding-top: 1%;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+        
+.add {
+    background-color: #1e1833;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10% 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+}        
+.top-fixed_ul {
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.top-fixed_li {
+    float: left;
+}
+
+.top-fixed_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-fixed_li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+     
+     .groupButtonSelected
+     {
+         margin-left: 1%;
+        background-color: green;
+         color: white;
+         border: 0px solid green;
+         border-radius: 7px;
+     }  
+      .groupButton
+     {
+         margin-left: 1%;
+        background-color: #5389a6;
+         color: white;
+         border: 0px solid #5389a6;
+         border-radius: 7px;
+     }  
+     
+     .groupDelButton{
+          margin-left: 1%;
+        background-color: #7f0000;
+         color: white;
+         border: 0px solid #7f0000;
+         border-radius: 50%;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+
+  inset 0 0 20px rgba(0,0,0,.1);
+     }
+          .groupDelButton:hover{
+          margin-left: 1%;
+        background-color: #9a0000;
+         color: white;
+         border: 0px solid #7f0000;
+         border-radius: 50%;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+
+  inset 0 0 20px rgba(0,0,0,.1);
+     }
+      .WishtdNOTOWNER:hover{
+     text-shadow: 0px 0px 2px white
+}
+    </style>
+ </head>
+ <body> 
+     
+   <header>
+    <h1 font-size="20px" align="center">WantIT</h1>
+           </header>
+ <nav>
+    <ul class="top-fixed_ul">
+        <li class="top-fixed_li"><a href="#">Желания</a></li>
+        <li class="top-fixed_li"><a href="/groups">Группы</a></li>
+        <li class="top-fixed_li"><a href="/user/<%= user %>/">Аккаунт </a></li>
+    </ul>
+</nav>
+      <h4>Название выбранной группы - <%= group %> </h4>  
+         <div style="text-align:center;">
+           <table>
+                <form method="POST"  text-align="center">
+               <tr>
+              <th><input type=text size="75"  rows="1" class="input"  id = "input" name="AddWish" placeholder="Добавить желание"/></th>
+                   <th><button class="add" id = "1" type="submit">Добавить</button></th>
+               </tr>
+               </form>
+                <tr>
+                    <th>Желание</th>
+                    <th>Имя</th>
+                    
+                </tr> 
+                  <form method="DELETE"  text-align="center">
+               <% for (var i = (data.length - 1); i >= 0; i--){ %>
+                <tr>
+                <td onclick='Deltest'>
+                    
+                    <% if (user == data[i].User){  %>
+                     <a class="Wishtd" href = "delete/<%= data[i].Wish %>"><%= data[i].Wish %></a>
+                        <% } else{ %>
+                    <% if (data[i].Wid != 0){ %>
+                     <% if (data[i].Wid == user){ %>
+                    <a class="Wishtd" href = "unselect/<%= data[i].Wish %>"><%= data[i].Wish %><A class="postScriptm" > (click to unselect)</A></a>
+                     <% } else{%>
+                    <a class="wishesSelected"><%= data[i].Wish %><A class="postScriptm" > (already selected)</A></a>
+                    <% } %>
+                        <% }
+                    
+                        else{%>
+                    <a class="wishes" href = "select/<%= data[i].Wish %>"><%= data[i].Wish %></a>
+                    <% } %>
+                    
+                    <% } %>
+                       </td>
+                    
+               <td><%= data[i].User %></td>
+
+               </tr>
+               <% }  %>
+                      
+                      <script>
+                          $("#input").keyup(function(event){
+                          if(event.keyCode == 13){
+                          $("#1").click();
+                          $(this).val('');
+                                                 }
+                                                                   });
+                      </script>
+               </form>
+         </table>
+
+             </div>
+          <script Language="JavaScript">   function sleep(ms) {
+ms += new Date().getTime();
+while (new Date() < ms){}
+} 
+sleep(20);
+</script>
+      </body>
+</html>

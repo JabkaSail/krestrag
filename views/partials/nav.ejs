@@ -1,0 +1,40 @@
+<style>
+.top-fixed_ul {
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.top-fixed_li {
+    float: left;
+}
+
+.top-fixed_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-fixed_li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+    </style>
+<nav>
+    <ul class="top-fixed_ul">
+        <li class="top-fixed_li"><a href="/wishes">Wishes</a></li>
+        <li class="top-fixed_li"><a href="/group/user/<%user%>">Groups</a></li>
+        <li class="top-fixed_li"><a href="/acc">Account </a></li>
+    </ul>
+</nav>

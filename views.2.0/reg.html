@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>WantIt</title>
+      <link rel = "stylesheet" href="styles.css"/>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #232323;
+             color: white;
+    text-align:center;
+    margin-top: 5%;
+}
+table {
+    background-color: #1e1833;
+    border-collapse: separate;
+    width: 90%;
+   margin-left:5%;
+     margin-right:5%;
+}
+         a { 
+             color: white;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   }
+
+th, td {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+tr:nth-child(even){background-color: #162930}
+
+th {
+    font-size: 1.2em;
+    background-color: #1e1833;
+    color: white;
+}
+textarea {
+    width: 70%;
+    padding: 1%;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    outline: none;
+	-moz-appearance: none;
+	border: 1px solid #110051;
+    resize: none;
+	overflow: auto;
+}
+        
+button {
+    background-color: #1e1899;
+    border: none;
+    color: white;
+  
+    width: 10%;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+     -webkit-border-radius: 5px;
+    border-radius: 5px;
+}        
+     </style>
+ </head>
+ <body> 
+     
+   <header>
+    <h1 font-size="20px" align="center">WantIT</h1>
+           </header>
+     
+<style>
+    .button {
+    background-color: #1e1899;
+    border: none;
+    color: white;
+    width: 10%;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+           -webkit-border-radius: 5px;
+    border-radius: 5px;
+} 
+.top-fixed_ul {
+    z-index: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.top-fixed_li {
+    float: left;
+}
+
+.top-fixed_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-fixed_li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+    .wishesAuthor:hover{
+    text-decoration: line-through;
+   
+        color: red;
+} 
+    
+    .wishesSelected{
+    text-decoration: line-through;
+        color: gray;
+} 
+    
+    .postScriptm{
+    text-decoration: none;
+        color: gray;
+}     
+    
+    input[type="text"] {
+  
+   padding-bottom: 1%;
+ 
+   padding-top: 1%;
+   border: 1px solid black;
+   border-radius: 5px;
+}
+    .wishes:hover{
+           text-decoration: underline;
+   
+        color: green;
+    }    
+    </style>
+       <form action="/registration" method="POST" align="center">
+         <h3>Введите логин</h3>
+           <% if (CurrentLogin == 1){ %>
+              <input type="text" name="login" style="text-align:center;" size="75" id="login" class="input"  placeholder="Выбирите другой логин"/>
+           <% } else {  %>
+          <input id="login" name="login" placeholder="Введите логин" type="text" rows="1" size="75"/> 
+            <% }  %>
+         <h3>Введите пароль</h3>
+           <input name="password" type="password" style="text-align:center;" id="password" wrap='hard' placeholder="Ваш пароль" accesskey="Enter" size="75"/>
+            <h3>Введите электронную почту</h3>
+           <p><input name="email" type="text" style="text-align:center;" id="email" wrap='hard' placeholder="Ваша электронная почта" accesskey="Enter" size="75"/></p>
+           <p><input id="1" class="button" id="Enterbutton" type="submit" value="Ввод"></p>
+           <% if (proverka == 1){%>
+           <label>Пожалуйста, заполните все поля!</label>
+           <%} %>
+     </form>     
+       <script>
+     var input = document.getElementById("login");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("myBtn").click();
+    }
+});
+           
+            var input = document.getElementById("password");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("Enterbutton").click();
+    }
+});
+                      </script>
+     
+      </body>
+</html>
