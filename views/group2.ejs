@@ -279,11 +279,15 @@ textarea {
             font-size: 3em;
          
         }
-        
+        .hideAll  {
+        visibility:hidden;
+     }
+
+       
         </style>
  </head>
-<body style="visibility: hidden"
-      onload="setTimeout ('document.body.style.visibility = \'visible\'', 0)">
+<body>
+    <div id="tabs" class="hideAll">
 
      
    <header>
@@ -443,11 +447,12 @@ function copyToClipboard(elem) {
     }
     return succeed;
 }</script>
-          <script Language="JavaScript">   function sleep(ms) {
-ms += new Date().getTime();
-while (new Date() < ms){}
-} 
-sleep(20);
+<script type="text/javascript">
+    $(window).load(function () {
+        $("#tabs").removeClass("hideAll");
+    });
 </script>
+
+         </div>
       </body>
 </html>
