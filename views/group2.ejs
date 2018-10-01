@@ -279,15 +279,22 @@ textarea {
             font-size: 3em;
          
         }
-        .hideAll  {
-        visibility:hidden;
-     }
+          #hideAll
+ {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 99; /* Higher than anything else in the document */
 
+ }
        
         </style>
  </head>
 <body>
-    <div id="tabs" class="hideAll">
+    <div style="display: none" id="hideAll">&nbsp;
 
      
    <header>
@@ -447,12 +454,7 @@ function copyToClipboard(elem) {
     }
     return succeed;
 }</script>
-<script type="text/javascript">
-    $(window).load(function () {
-        $("#tabs").removeClass("hideAll");
-    });
-</script>
-
+<script type="text/javascript">  $(window).load(function() {  document.getElementById("hideAll").style.display = "none"; });</script>
          </div>
       </body>
 </html>
