@@ -384,22 +384,12 @@ textarea {
          
         }
         
-      #hideAll
- {
-   position: fixed;
-   left: 0px; 
-   right: 0px; 
-   top: 0px; 
-   bottom: 0px; 
-   background-color: white;
-   z-index: 99; /* Higher than anything else in the document */
 
- }
        
         </style>
  </head>
 <body>
-    <div style="display: none" id="hideAll">&nbsp;
+   
      
    <header>
    
@@ -459,41 +449,9 @@ input.addEventListener("keyup", function(event) {
 });
                       </script>
      
- <script Language="JavaScript">   function sleep(ms) {
-ms += new Date().getTime();
-while (new Date() < ms){}
-} 
-sleep(20);
-</script>
-    
-     <script>
-        $("form").submit(function(e) {
-             
-            e.preventDefault();
-            var registerForm = document.forms["registerForm"];
-            var userName = registerForm.elements["userName"].value;
-            var userAge = registerForm.elements["userAge"].value;
-             
-            $.ajax({
-                type: "POST",
-                url: "/user",
-                data: JSON.stringify({userName: userName, userAge: userAge}),
-                dataType: "json",
-                contentType: "application/json",
-                success: function(data){ 
-                    console.log(data);
-                    },
-                });
-        });
-    </script>
-
-
-  <script>  window.onload = function() 
-  { document.getElementById("hideAll").style.display = "none"; }</script>
-   
            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
-        </div>
+      
       </body>
 </html>
