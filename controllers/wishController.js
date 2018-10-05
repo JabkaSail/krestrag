@@ -7,8 +7,8 @@ var nodemailer = require('nodemailer');
 var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
- password : 'ApoD_rasStRELny',
-// password : 'password',
+// password : 'ApoD_rasStRELny',
+ password : 'password',
   database : 'WantIt'
  });
 
@@ -21,7 +21,7 @@ module.exports = function(app){
           con.query("SELECT * FROM `WishesDb` WHERE `Group` = ?", [req.session.GroupName], function (err, rows, result) {
         if (err) throw err;
         var popa = JSON.parse(JSON.stringify(rows));
-        res.render('wishes2', {group: req.session.GroupName, data: popa, user: req.session.User});
+        res.render('wishes', {group: req.session.GroupName, data: popa, user: req.session.User});
         });
       });
      app.post('/wishes', urlencodedParser, function(req, res){
@@ -81,7 +81,7 @@ module.exports = function(app){
         subject: 'Появилось желание в вашей группе', // Subject line
         text: req.session.User+' хочет '+wish, // plain text body
         html: '<b>'+req.session.User+' теперь хочет '+wish+'</b>'+
-        '<br> <a href="krestrage.com">'+'Перейти на Крестраж'+'</a>'// html body
+        '<br> <a href="krestrage.com">'+'Перейти на Крестраж'+'</a>'// html bod  
     };
 
     // send mail with defined transport object

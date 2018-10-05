@@ -2,218 +2,94 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>WantIt</title>
-    
-     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <title>Крестраж</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
      <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #232323;
-             color: white;
-    text-align:center;
-    margin-top: 5%;
-}
-table {
-    url()
-    background-color: #1e1833;
-    border-collapse: separate;
-    width: 90%;
-   margin-left:5%;
-     margin-right:5%;
-}
-         a { 
-             color: white;
-    text-decoration: none; /* Отменяем подчеркивание у ссылки */
-   }
-
-th, td {
-    padding-right: 0px;
-    padding-left: 0px;
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-    .Wishtd:hover{
-    text-decoration: line-through;
-    color: rgba(200,80,80,0.5);
-}
-
-tr:nth-child(even){background-color: #162930}
-
-th {
-    font-size: 1.2em;
-    background-color: #1e1833;
-    color: white;
-}
-.input {
-    width: 90%; 
-    padding: 1%;
-    text-align: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 15px;
-    font-size: 1.1em;
-    outline: none;
-	-moz-appearance: none;
-	border: 1px solid #110051;
-    resize: none;
-	overflow: auto;
-    padding-bottom: 1%;
-   padding-top: 1%;
-   border: 1px solid black;
-   border-radius: 5px;
-}
-        
-.add {
-    background-color: #1e1833;
-    border: none;
-    color: white;
-    width: 100%;
-    padding: 10% 10%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100%;
-}        
-.top-fixed_ul {
-    z-index: 100;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.top-fixed_li {
-    float: left;
-}
-
-.top-fixed_li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.top-fixed_li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-     
-     .groupButtonSelected
-     {
-         margin-left: 1%;
-        background-color: green;
-         color: white;
-         border: 0px solid green;
-         border-radius: 7px;
-     }  
-      .groupButton
-     {
-         margin-left: 1%;
-        background-color: #5389a6;
-         color: white;
-         border: 0px solid #5389a6;
-         border-radius: 7px;
-     }  
-     
-     .groupDelButton{
-          margin-left: 1%;
-        background-color: #7f0000;
-         color: white;
-         border: 0px solid #7f0000;
-         border-radius: 50%;
-
-  box-shadow: 0 3px 20px rgba(0,0,0,.25),
-
-  inset 0 0 20px rgba(0,0,0,.1);
-     }
-          .groupDelButton:hover{
-          margin-left: 1%;
-        background-color: #9a0000;
-         color: white;
-         border: 0px solid #7f0000;
-         border-radius: 50%;
-
-  box-shadow: 0 3px 20px rgba(0,0,0,.25),
-
-  inset 0 0 20px rgba(0,0,0,.1);
-     }
-      .WishtdNOTOWNER:hover{
-     text-shadow: 0px 0px 2px white
-}
-    </style>
+      <link rel = "stylesheet" href="/styles.css"/>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
  </head>
- <body> 
-     
+<body>
+  
    <header>
-    <h1 font-size="20px" align="center">WantIT</h1>
+   
            </header>
- <nav>
+<nav>
     <ul class="top-fixed_ul">
-        <li class="top-fixed_li"><a href="#">Желания</a></li>
-        <li class="top-fixed_li"><a href="/groups">Группы</a></li>
-        <li class="top-fixed_li"><a href="/user/<%= user %>/">Аккаунт </a></li>
+        
+     
+        
+        <!-- <li class="top-fixed_li imgos" style="float: left;"><a></a></li> -->
+          
+        <li class="navwishes top-fixed_li "><a href="/wishes/">Желания</a></li>
+        <li class="top-fixed_li navmenu navgroups"><a href="/groups">Группы</a></li>
+        <li class="top-fixed_li navmenu navacc"><a href="/user/<%= user %>/">Аккаунт </a></li>
+        <li class="top-fixed_li"  style="float: none;"><p class="maintext" >Крестраж!</p></li>
     </ul>
 </nav>
-      <h4>Название выбранной группы - <%= group %> </h4>  
+     
+                  
+     <div class="container">
+  <div class="row">
+            
+                  
+                  
+                  <div class="col-sm"><button class="add" style="display: none" id = "1" type="submit">Добавить</button></div>
+                </div>
+</div>                 
+       <form method="POST"  text-align="center">
+      <div class="col-sm"><input type=text size="75"  rows="1" class="input" style="margin-top: 10%; margin-bottom: 0; font-family: 'Amatic SC', cursive; font-size: 2.2em; outline:none; border: 0px; text-align: center; height: 100%;"  id = "input" name="AddWish" placeholder="Добавить желание"/></div>
+            </form>
+                    <hr style="margin-top: 0;">
+           
+      <h4 style="margin-bottom: 0; font-family: 'Amatic SC', cursive; font-size: 1.7em" >*Желания группы*</h4>
+     
          <div style="text-align:center;">
-           <table>
-                <form method="POST"  text-align="center">
-               <tr>
-              <th><input type=text size="75"  rows="1" class="input"  id = "input" name="AddWish" placeholder="Добавить желание"/></th>
-                   <th><button class="add" id = "1" type="submit">Добавить</button></th>
-               </tr>
-               </form>
-                <tr>
-                    <th>Желание</th>
-                    <th>Имя</th>
+ 
+                          <div class="container">
+                            <div class="row">
+                     <div class="col-sm">Желание</div>
+                     <div class="col-sm">Автор</div>
                     
-                </tr> 
-                  <form method="DELETE"  text-align="center">
+                </div>
+               <p></p>
+                 
+            <form  text-align="center">
+                <div class="container">
                <% for (var i = (data.length - 1); i >= 0; i--){ %>
-                <tr>
-                <td onclick='Deltest'>
-                    
-                    <% if (user == data[i].User){  %>
-                     <a class="Wishtd" href = "delete/<%= data[i].Wish %>"><%= data[i].Wish %></a>
+                 
+                            <div class="row">
+                                <div class="col-sm">
+                 <% if (user == data[i].User){  %>
+                     <a class="WishtdOWNER" href = "delete/<%= data[i].Wish %>"><%= data[i].Wish %></a>
                         <% } else{ %>
                     <% if (data[i].Wid != 0){ %>
                      <% if (data[i].Wid == user){ %>
-                    <a class="Wishtd" href = "unselect/<%= data[i].Wish %>"><%= data[i].Wish %><A class="postScriptm" > (click to unselect)</A></a>
+                    <a class="Wishtd" href = "unselect/<%= data[i].Wish %>"> <%= data[i].Wish %> <A class="postScriptm" ><span style="padding-left: 1em; color: gray; position: absolute;"> (click to unselect)</span></A></a>
                      <% } else{%>
-                    <a class="wishesSelected"><%= data[i].Wish %><A class="postScriptm" > (already selected)</A></a>
+                    <a class="wishesSelected"><%= data[i].Wish %><A class="postScriptm" ><span style="padding-left: 1em; color: gray; position: absolute;"> (already selected)</span> </A></a>
                     <% } %>
-                        <% }
-                    
-                        else{%>
+                         <% } else {%>
                     <a class="wishes" href = "select/<%= data[i].Wish %>"><%= data[i].Wish %></a>
                     <% } %>
                     
-                    <% } %>
-                       </td>
                     
-               <td><%= data[i].User %></td>
-
-               </tr>
-               <% }  %>
-                      
-                      <script>
+                        
+                    <% }  %> 
+                 </div>
+                       
+                                <div class="col-sm"><%= data[i].User %></div>
+                               
+                </div>
+                    <hr>
+              
+              <% }  %> 
+                     </div>
+                    </form>
+                    <script>
                           $("#input").keyup(function(event){
                           if(event.keyCode == 13){
                           $("#1").click();
@@ -221,15 +97,14 @@ th {
                                                  }
                                                                    });
                       </script>
-               </form>
-         </table>
-
+              
              </div>
-          <script Language="JavaScript">   function sleep(ms) {
-ms += new Date().getTime();
-while (new Date() < ms){}
-} 
-sleep(20);
-</script>
+                              </div>
+         
+           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
+   
       </body>
+   
 </html>

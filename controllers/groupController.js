@@ -8,8 +8,8 @@ var uniqid = require('uniqid');
 var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'ApoD_rasStRELny',
- //password : 'password',
+ // password : 'ApoD_rasStRELny',
+ password : 'password',
   database : 'WantIt'
  });
 
@@ -34,7 +34,7 @@ module.exports = function(app){
                         req.session.GroupName = popas[0].group
                     req.session.GroupCode = popa[0].uniqid;
                         }
-        res.render('groups2', {data: popa, user: req.session.User, selected: popas[0].group,  error: 0});
+        res.render('groups', {data: popa, user: req.session.User, selected: popas[0].group,  error: 0});
         });
                     });
                     } else{
@@ -93,7 +93,7 @@ module.exports = function(app){
                     else {
                     req.session.GroupName = popas[0].group;
                         }
-        res.render('groups2', {data: popa, user: req.session.User, selected: popas[0].group,  error: 1});
+        res.render('groups', {data: popa, user: req.session.User, selected: popas[0].group,  error: 1});
         });
                     });
                     } else{
@@ -170,7 +170,7 @@ module.exports = function(app){
                           res.redirect('/groups');
                     }
                     else {
-                  res.render('group2', {data: popas, user: req.session.User, selected: popas[0].Name });
+                  res.render('group', {data: popas, user: req.session.User, selected: popas[0].Name });
                         }
         
         });
