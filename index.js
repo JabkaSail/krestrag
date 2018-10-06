@@ -24,7 +24,7 @@ app.use(session({secret: 'popkaPlusJopkadjhKPPйFj',
 var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'ApoD_rasStRELny',
+ password : 'ApoD_rasStRELny',
  // password : 'password',
   database : 'WantIt'
  });

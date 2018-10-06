@@ -1,35 +1,40 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
  <head>
   <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Крестраж</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
      <script src="http://code.jquery.com/jquery-latest.js"></script>
       <link rel = "stylesheet" href="/styles.css"/>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
  </head>
 <body>
    
      
    <header>
-   
-           </header><nav>
-    <ul class="top-fixed_ul">
-        
-     
-        
-         <!-- <li class="top-fixed_li imgos" style="float: left;"><a></a></li> -->
-          
-        <li class="navwishes top-fixed_li "><a href="/wishes/">Желания</a></li>
-        <li class="top-fixed_li navmenu navgroups"><a href="/groups">Группы</a></li>
-        <li class="top-fixed_li navmenu navacc"><a href="/user/<%= user %>/">Аккаунт </a></li>
-        <li class="top-fixed_li"  style="float: none;"><p class="maintext" >Крестраж!</p></li>
+   <nav>
+    <ul class="top-fixed_ul"> 
+       
+         <div class="krestragedisp1 mx-auto" style="width: 200px;"><p class="maintext">Крестраж!</p></div>
+        <div id="myLinks">
+        <li class="navwishes navwishes-s top-fixed_li "><a href="/wishes/">Желания</a></li>
+        <li class="top-fixed_li navmenu navgroups navgroups-s"><a href="/groups">Группы</a></li>
+        <li class="top-fixed_li top-fixed_li-s navmenu navacc-s navacc"><a href="/user/<%= user %>/">Аккаунт </a></li>
+      <div class="krestragedisp mx-auto" style="width: 200px;"><p class="maintext" >Крестраж!</p></div>
+            
+       </div>
+        <div class="fak">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars" style="margin-top: 1% margin-bottom: 1%"></i>
+  </a>
+            </div>
     </ul>
-</nav>
+</nav> 
+           </header>
      <div style="margin: 10%;">
      <div class="container">
          <div class="row"> 
@@ -40,7 +45,7 @@
            <p>Ваше имечко: <%= user %></p>
                     <hr style="margin-top: 0;">
            <div class="src">
-                   <button id = "1" type="submit"><i  class="fa fa-envelope-o"></i>Покинуть аккаунт?</button>
+                   <button id = "1" type="submit"><i  class="fa "></i>Покинуть аккаунт?</button>
                   
   <div class="line__wrap">
     <span></span>
@@ -72,10 +77,18 @@ input.addEventListener("keyup", function(event) {
     }
 });
                       </script>
-     
-           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
-      
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
       </body>
 </html>

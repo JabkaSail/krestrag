@@ -1,5 +1,393 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Montserrat|Poiret+One');
 
+.fak{
+   
+    visibility: hidden;
+}
+
+
+       
+
+
+#myLinks{
+ display: block;
+}
+
+.dropdown {
+
+}
+
+.dropdown-content {
+  
+}
+
+.dropdown:hover .dropdown-content {
+   
+}
+
+
+    
+
+.prs{
+    margin-top: 10%;
+}
+
+ .krestragedisp1{
+        display: none;
+    }
+
+.input{
+    width: 90%;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    border: 0px;
+   
+    font-size: 2em;
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px;
+    width: 80%/* Толщина линии */
+   
+   }
+        
+        body {
+             text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFFF;
+             color: black;
+    text-align:center;
+    margin-top: 0%;
+}
+table {
+   
+    border-collapse: separate;
+    width: 90%;
+   margin-left:5%;
+     margin-right:5%;
+}
+         a { 
+             color: black;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   }
+
+th, td {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+    .Wishtd:hover{
+    
+    color: greenyellow;
+   
+}
+        
+         .WishtdOWNER:hover{
+    
+    color: red;
+   
+}
+
+tr:nth-child(even){background-color: #b7b7b7}
+
+th {
+    font-size: 1.2em;
+   background-color: white;
+   
+    color: black;
+}
+textarea {
+    width: 70%;
+    padding: 1%;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    outline: none;
+	-moz-appearance: none;
+	border: 1px solid #b7b7b7;
+    resize: none;
+	overflow: auto;
+}
+        
+.add {
+    background-color: #b7b7b7;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10% 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+}       
+        
+        ul {
+            text-decoration: none;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+    
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+        
+        .topmenu > li:hover {
+    
+  color: red;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+     color:red;
+}
+
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 10px;
+}
+.submenu{
+border: 1px solid gray;
+    border-top: 0px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+    
+}
+        
+        .one ul {
+  
+}
+.one ul a {
+ 
+}
+.one .submenu {
+  display: none;
+    
+  
+}
+.one ul li:hover .submenu {
+   color: aqua;
+  display: block;
+}
+        
+.top-fixed_ul {
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(192,192,192, 0.1);
+    position: fixed;
+   display: table;
+   text-align: center;
+    top: 0;
+    width: 100%;
+     
+       vertical-align: middle;
+}
+
+.top-fixed_li {
+    
+    float: right;
+     vertical-align: middle;
+}
+
+.top-fixed_li a {
+  
+    transition: 0.1s;
+    display: block;
+    color: black;
+    bottom: 0;
+    padding: 2em;
+    text-decoration: none;
+     display: inline-block;
+     float: none;
+    
+       vertical-align: middle;
+   
+}
+
+.top-fixed_li a:hover {
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+     
+     .groupButtonSelected
+     {
+         margin-left: 1%;
+        background-color: green;
+         color: white;
+         border: 0px solid green;
+         border-radius: 10%;
+     }  
+     
+     
+     .src {
+         transition: 1s;
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+[type="submit"] {
+    margin: 27px 0 0 0;
+    font-family: 'Poiret One', cursive; 
+    letter-spacing: 1.5px;
+   
+    display: block;
+    vertical-align: middle;
+    padding: 9px 0;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #111;
+    background: transparent;
+    -webkit-transition: all .34s ease-in-out;
+    -o-transition: all .34s ease-in-out;
+    transition: all .34s ease-in-out;
+    font-size: 1.5em;
+}
+
+.line__wrap span {
+  display: block;
+  background: #0dff00;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.src:hover .line__wrap span:nth-of-type(1){ 
+  width: 0%; height: 2px; top: 0; left: 0; 	
+  animation: lineWidth .25s ease-in-out both ;
+}
+.src:hover .line__wrap span:nth-of-type(2){ 
+  width: 2px; height: 0%; top: 0; right: 0;
+  animation: lineHeight .25s .25s ease-in-out both ;
+}
+.src:hover .line__wrap span:nth-of-type(3){ 
+  width: 0%; height: 2px; bottom: 0; right: 0; 
+  animation: lineWidth .25s .5s ease-in-out both ;
+}
+.src:hover .line__wrap span:nth-of-type(4){ 
+  width: 2px; height: 0%; bottom: 0; left: 0;
+  animation: lineHeight .25s .75s ease-in-out both ;
+}
+
+@-webkit-keyframes lineWidth { to { width: 100%; } }
+   @-moz-keyframes lineWidth { to { width: 100%; } }
+     @-o-keyframes lineWidth { to { width: 100%; } }   
+        @keyframes lineWidth { to { width: 100%; } }
+@-webkit-keyframes lineHeight { to { height: 100%; } }
+   @-moz-keyframes lineHeight { to { height: 100%; } }
+     @-o-keyframes lineHeight { to { height: 100%; } }   
+        @keyframes lineHeight { to { height: 100%; } }
+     
+        a:hover{
+        text-decoration: none;
+}
+      .groupButton
+     {
+         background: url();
+         margin-left: 1%;
+        background-color: #5389a6;
+         color: white;
+         border: 0px solid #5389a6;
+         border-radius: 10%;
+     }  
+      .WishtdNOTOWNER:hover{
+     text-shadow: 0px 0px 2px white
+}
+        
+       
+  .add,
+.add:focus {
+ margin: 0;
+    font-size: 1em;
+  color: #ff4fa7;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 0.1em solid #fff;
+    
+}
+
+.add:hover{
+      color: #ffffff;
+  text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #ff4fa7;
+    border: 0.1em solid #ff4fa7;
+}
+        
+        .navmenu{
+            color: white;
+            
+        }
+
+    
+        .imgos{
+            margin-top: 0%; /* ../imgs/q1tR7Dg0Ano.png */
+   content:url('');
+            margin-left: 1%;
+            width: 6%;/*картинка для 1 пункта*/
+            height: auto;
+        }
+    
+   .maintext{
+            
+        
+           font-family: 'Amatic SC', cursive;
+            font-size: 5em;
+         
+        }
+    
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    
+        
+        .navwishes:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: greenyellow;
+        }
+
+        .navgroups:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: blue;
+        }
+        
+        .navacc:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: orange;
+        }
+    
+    #myLinks{
+ display: block;
+}
+
+    
 hr {
     border: none; /* Убираем границу */
     background-color: black; /* Цвет линии */
@@ -253,35 +641,6 @@ textarea {
      @-o-keyframes lineHeight { to { height: 100%; } }   
         @keyframes lineHeight { to { height: 100%; } }
      
-   /*  
-      .src
-     {
-         border: 0px;
-  display: inline-block;
-  position: relative;
- 
-  border-left: 2px solid #000;
-  border-right: 2px solid #000;
-     }  
-     
-      .src:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000;
-  transition: all 1s;
-}
-
-     
-
-.src:hover:after {
-  width: 100%;
-}
- */  
         a:hover{
         text-decoration: none;
 }
@@ -351,9 +710,214 @@ textarea {
     
    .maintext{
             
-           margin-left: 46%;
-            margin-right: 54%;
+        
            font-family: 'Amatic SC', cursive;
-            font-size: 3em;
+            font-size: 5em;
          
         }
+    }
+
+@media (min-width: 1200px) {
+        .fak{
+   visibility: hidden;
+}
+        
+        #myLinks{
+ display: block;
+}
+
+        
+         .navwishes{
+           
+            color: black;
+            background-color: transparent;
+        }
+
+        .navgroups{
+           
+            color: black;
+            background-color: transparent;
+        }
+        
+        .navacc{
+             transition: 0.1s;
+             color: black;
+            background-color: transparent;
+        }
+        
+        .navwishes:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: greenyellow;
+        }
+
+        .navgroups:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: blue;
+        }
+        
+        .navacc:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: orange;
+        }
+    
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+        .fak{
+    visibility: hidden;
+}
+    
+  #myLinks{
+ display: block;
+}
+
+    
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+#myLinks{
+ display: block;
+}
+
+     .navwishes{
+           
+            color: black;
+            background-color: transparent;
+        }
+
+        .navgroups{
+           
+            color: black;
+            background-color: transparent;
+        }
+        
+        .navacc{
+             transition: 0.1s;
+             color: black;
+            background-color: transparent;
+        }
+        
+        .navwishes:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: greenyellow;
+        }
+
+        .navgroups:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: blue;
+        }
+        
+        .navacc:hover{
+             transition: 0.1s;
+            color: white;
+            background-color: orange;
+        }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+    .navwishes{
+           
+            color: white;
+            background-color: greenyellow;
+        }
+
+        .navgroups{
+        
+            color: white;
+            background-color: blue;
+        }
+        
+        .navacc{
+            
+            color: white;
+            background-color: orange;
+        }
+    
+          .fak{
+    visibility: visible;
+}
+    
+    .maintext{
+        
+        font-size: 3em;
+    }
+    
+    h3{
+         font-size: 1.2em;
+    }
+    
+    nav{
+        
+    }
+    
+     .krestragedisp1{
+           position: relative;
+        display: block;
+    }
+    
+    .krestragedisp{
+           position: relative;
+        display: none;
+    }
+    
+    .top-fixed_ul {
+        
+        position: relative;
+     list-style-type: none;
+    margin: 0;
+    padding-top: 0px;
+  
+}
+
+.top-fixed_li {
+     width: 100%;
+  margin: 0;
+    padding: 0;
+}
+
+.top-fixed_li a {
+     margin-bottom: f1%;
+    padding: 2%;
+   display: block;
+}
+
+.top-fixed_li a:hover {
+   
+}
+    
+
+
+#myLinks{
+  display: block;
+}
+
+.fak{
+    display: block;
+}
+
+.top-fixed_li a {
+  
+    color: white;
+}
+
+    .mobileopt{
+        display: none;
+    }
+    
+    .src{
+        font-size: 70%;
+    }
+    
+}
+
+@media (max-width: 650) {
+
+}

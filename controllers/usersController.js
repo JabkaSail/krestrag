@@ -73,9 +73,45 @@ module.exports = function(app){
 }
      });
      
+     app.post('/login', urlencodedParser, function(req, res){
+         var  User = req.body.login.replace(/^\s+|\s+$/g, '');
+          var password = req.body.password.replace(/^\s+|\s+$/g, '');
+        var values = {
+        User: req.body.login.replace(/^\s+|\s+$/g, ''),
+        password: req.body.password.replace(/^\s+|\s+$/g, ''),
+    }
+          if (User == "" || password == ""){
+                   res.render('login',{CurrentLogin: 1, proverka: 1});
+          }
+         else {
+                  con.query("SELECT User, password FROM `UserDb` WHERE `User` = ? OR `email` = ?", [req.body.login, req.body.login], function (err, rows, result) {
+        if (err) throw err;
+                       var popa = JSON.parse(JSON.stringify(rows));
+                    if (popa[0] == undefined){
+                        
+          res.render('reg',{CurrentLogin: 0, proverka: 0});
+            }
+                      else{
+                          if (popa[0].User == req.body.login && popa[0].password == req.body.password){
+                               req.session.User = req.body.login;
+          res.redirect('/groups');
+                          }
+                          else{
+                          res.render('login',{CurrentLogin: 1, proverka: 0});
+                      }
+                          }
+        });
+}
+     });       
+       
     //GET Login Req     
        
      app.get('/login', function(req, res){
+      res.render('login',{CurrentLogin: 0, proverka: 0});
+      
+     }); 
+       
+        app.get('/reg', function(req, res){
       res.render('reg',{CurrentLogin: 0, proverka: 0});
       
      }); 
@@ -85,18 +121,6 @@ module.exports = function(app){
         
          res.redirect('/login');
       
-     }); 
-   
-       
-/*            app.get('/user/:userid/group/:group/wish/:wish/select', function(req, res){
-                var val = {
-                    Wid: 1
-                            }
-          con.query("UPDATE `WishesDb` SET ? WHERE `Group` = ? AND `Wish` = ?", [val, req.params.group, req.params.wish], function (err, rows, result) {
-        if (err) throw err;
-         res.redirect('/user/'+req.params.userid+'/group/'+req.params.group+'/wish/');
-        });
-     });   
-   */    
+     });    
      });
  };                      

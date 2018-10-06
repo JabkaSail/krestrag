@@ -2,37 +2,41 @@
 <html>
  <head>
   <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Крестраж</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
      <script src="http://code.jquery.com/jquery-latest.js"></script>
       <link rel = "stylesheet" href="/styles.css"/>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
  </head>
 <body>
    
      
    <header>
-   
-           </header>
-<nav>
-    <ul class="top-fixed_ul">
-        
-     
-        
-       <!-- <li class="top-fixed_li imgos" style="float: left;"><a></a></li> -->
-          
-        <li class="navwishes top-fixed_li "><a href="/wishes/">Желания</a></li>
-        <li class="top-fixed_li navmenu navgroups"><a href="/groups">Группы</a></li>
-        <li class="top-fixed_li navmenu navacc"><a href="/user/<%= user %>/">Аккаунт </a></li>
-        <li class="top-fixed_li"  style="float: none;"><p class="maintext" >Крестраж!</p></li>
+   <nav>
+    <ul class="top-fixed_ul"> 
+       
+         <div class="krestragedisp1 mx-auto" style="width: 200px;"><p class="maintext">Крестраж!</p></div>
+        <div id="myLinks">
+        <li class="navwishes navwishes-s top-fixed_li "><a href="/wishes/">Желания</a></li>
+        <li class="top-fixed_li navmenu navgroups navgroups-s"><a href="/groups">Группы</a></li>
+        <li class="top-fixed_li top-fixed_li-s navmenu navacc-s navacc"><a href="/user/<%= user %>/">Аккаунт </a></li>
+      <div class="krestragedisp mx-auto" style="width: 200px;"><p class="maintext" >Крестраж!</p></div>
+            
+       </div>
+        <div class="fak">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+            </div>
     </ul>
-</nav>            
-                 <form method="POST"  text-align="center">
+</nav> 
+           </header>
+           
+                 <form class="prs" method="POST"  text-align="center">
      <div class="container">
   <div class="row">
             
@@ -51,9 +55,9 @@
  
                           <div class="container">
                             <div class="row">
-                     <div class="col-sm">Группа</div>
-                     <div class="col-sm">Автор</div>
-                     <div class="col-sm">Опции</div>
+                                <div class="col-sm">Группа</div>
+                     <div class="col-sm mobileopt">Автор</div>
+                   <div class="col-sm mobileopt">Опции</div>
                 </div>
                <p></p>
                   <form text-align="center">
@@ -70,15 +74,15 @@
       <!-- Не выбрана -->        
                                 <div class="col-sm"><a class="Group" href = "/select/<%= data[i].uniqid %>"> <%= data[i].Name %> </a></div> 
                                  <% }  %>
-                                    <div class="col-sm">
+                                    <div class="col-sm mobileopt">
                                         <%= data[i].Author %>
                                     </div>
-                                <div class="col-sm"><nav class="one"> <ul class="topmenu"><li><a href="#"><span style="color: green; text-decoration: none;" class="set">Опции</span><i class="fa fa-angle-down"></i></a> <ul class="submenu">
+                                <div class="col-sm mobileopt"><nav class="one"> <ul class="topmenu"><li><a href="#"><span style="color: green; text-decoration: none;" class="set">Опции</span><i class="fa fa-angle-down"></i></a> <ul class="submenu">
   <li><a href='delete/<%= data[i].uniqid %>/' style="color: brown">Удалить</a></li>
   <li><a href="/groups/<%= data[i].uniqid %>" style="color: blue">Меню</a></li>                 
 </ul></li></ul> </nav></div>
                                      </div> 
-                                 <hr>
+                                 <hr style="background-color: gray;">
                                                        
                               <% }  %>
                             </div>    
@@ -97,8 +101,18 @@
         
      
   
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
-        
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+        <script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
       </body>
 </html>
