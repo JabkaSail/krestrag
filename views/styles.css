@@ -825,21 +825,43 @@ textarea {
 
     .navwishes{
            
+            color: black;
+            background-color: transparent;
+        }
+    
+    
+
+        .navgroups{
+        
+           color: black;
+            background-color: transparent;
+        }
+        
+     .navwishesACTIVE{
+           
             color: white;
             background-color: greenyellow;
         }
-
-        .navgroups{
+    
+    .navgroupsActive{
         
             color: white;
             background-color: blue;
         }
-        
-        .navacc{
+    
+     .navaccACTIVE{
             
             color: white;
             background-color: orange;
         }
+    
+        .navacc{
+            
+            color: black;
+            background-color: transparent;
+        }
+    
+   
     
           .fak{
     visibility: visible;
@@ -881,10 +903,11 @@ textarea {
      width: 100%;
   margin: 0;
     padding: 0;
+    font-size: 1em;
 }
 
 .top-fixed_li a {
-     margin-bottom: f1%;
+     
     padding: 2%;
    display: block;
 }
