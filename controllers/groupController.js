@@ -8,11 +8,10 @@ var uniqid = require('uniqid');
 var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-password : 'ApoD_rasStRELny',
-// password : 'password',
+//password : 'ApoD_rasStRELny',
+  password : 'password',
   database : 'WantIt'
  });
-
 
 
 module.exports = function(app){
@@ -57,8 +56,9 @@ module.exports = function(app){
      }
             con.query("SELECT * FROM `GroupsDb` WHERE `Name` = ?", [Group], function (err, rows, result) {
         if (err) throw err;
+                var uinic = uniqid();
                  var values = {
-                     uniqid: uniqid(),
+                     uniqid: uinic,
         Name: Group,
         User: req.session.User,
         Author: req.session.User,
@@ -69,15 +69,23 @@ module.exports = function(app){
        
    con.query("INSERT INTO GroupsDb SET ?", values, function (err, rows, fields) {
               if (err) throw err;
-       var Group = {
-           group: Group
-       }
-          con.query("UPDATE `UserDb` SET ? WHERE User = ?", [Group, req.session.User], function (err, rows, result) {
+                
+                          req.params.group = uinic;
+                   req.session.GroupName = Group;
+                          var value = {
+                group: req.session.GroupName
+            }
+          con.query("UPDATE `UserDb` SET ? WHERE User = ?", [value, req.session.User], function (err, rows, result) {
         if (err) throw err;
-            });
-                }); 
-          res.redirect('/groups');
-                }
+        
+        res.redirect('/groups');
+              
+               });
+                       
+                      });
+   
+         }
+                
                 else{
         if (req.session.User != null){
           console.log(req.session.User + " group");

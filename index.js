@@ -24,8 +24,8 @@ app.use(session({secret: 'popkaPlusJopkadjhKPPйFj',
 var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
- password : 'ApoD_rasStRELny',
- // password : 'password',
+//password : 'ApoD_rasStRELny',
+  password : 'password',
   database : 'WantIt'
  });
 
@@ -43,4 +43,4 @@ groupController(app);
 wishController(app);
 
  console.log('Сервер стартовал!');
-app.listen(80);
+app.listen(8080);
